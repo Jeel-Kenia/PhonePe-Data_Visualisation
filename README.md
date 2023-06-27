@@ -37,7 +37,7 @@
 
 * You have two options to select from as shown below:
 
-     ![image](https://github.com/Jeel-Kenia/PhonePe-Data_Visualisation/blob/main/Screenshot%202023-06-27%20at%204.32.38%20PM.png)
+     ![image](https://github.com/Jeel-Kenia/PhonePe-Data_Visualisation/blob/main/images/pages%20ss.png)
 
 * Depending upon the type of analysis, select one of the two and move on to the respective page.
 
