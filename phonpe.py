@@ -101,7 +101,6 @@ def query1(year,quarter):
             top_pincodes_with_max_count_bar(year,quarter)
 
 
-##########
 def query2(year,quarter):
     column1, column2 = st.columns([2.5,1])
     with column1:
@@ -207,11 +206,11 @@ def query2(year,quarter):
 
 
 
-##############################################        STREAMLIT        ##################################################
+#*************************************************        STREAMLIT        *****************************************************
 st.set_page_config(layout="wide")
 
 def home_page():
-    # Path to your image file
+    # Path to image file
     image_path = "/Users/jk/Desktop/VSCode/phonepe.png"
 
     # Display the image
@@ -349,7 +348,6 @@ def analysis_page2():
             top_pincodes_users_for_a_state_bar(year, state, quarter)
             
 
-
 # Create a dictionary to map page names to their corresponding functions
 pages = {
     'Home': home_page,
@@ -361,7 +359,6 @@ pages = {
 st.sidebar.write(' ')
 st.sidebar.write(' ')
 st.sidebar.write(' ')
-# selected_page = st.sidebar.selectbox(f':blue[Select a page from the dropdown to move on to analysis]', list(pages.keys()))
 selected_page = st.sidebar.radio(f':blue[Select a button from the list to move on to analysis]', list(pages.keys()))
 # Run the function corresponding to the selected page
 pages[selected_page]()
