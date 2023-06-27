@@ -42,3 +42,5 @@
 * Depending upon the type of analysis, select one of the two and move on to the respective page.
 
 * Select the **Type** , **Year** , **Quarter** and **State** depending upon the requirement to view charts and tables for the particular period.
+
+* ![image](dddd)
