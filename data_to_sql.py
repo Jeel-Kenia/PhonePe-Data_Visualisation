@@ -4,9 +4,9 @@ from phonepe_data_extraction import *
 
 def sql_connection():
     host = 'localhost'
-    user = 'root'
-    password = 'Jeel@1414'
-    database = 'PhonePe'
+    user = 'your_user_id'
+    password = 'your_password'
+    database = 'your_database_name'
     try:
         # Create a connection object
         conn= mysql.connector.connect(host=host, user=user, password=password, database=database)
@@ -16,7 +16,7 @@ def sql_connection():
     return cur,conn
 # sql_connection()
 
-#####create tables and transfer data to sql
+#***************************************   Creating tables and transferring data to SQL  ******************************************
 def agg_tran_table():
     cursor,conn = sql_connection()
     create_table1='''CREATE TABLE IF NOT EXISTS aggregate_transaction (state varchar(100), 
@@ -54,16 +54,14 @@ def agg_user_table():
 
     cursor.execute(create_table2)
 
-    # Inserting Values to aggregate_transaction table
+    # Inserting Values to aggregate_user table
     for i,row in get_data_for_agg_user().iterrows(): 
         query = "INSERT INTO aggregate_user (state,year,quarter,brand_name,user_count,user_percentage)VALUES (%s, %s, %s, %s, %s, %s)"
         values=(row['state'],row['year'],row['quarter'],row['brand_name'],row['user_count'],row['user_percentage'])
         cursor.execute(query,values)
         
-    # Commit the changes    
+    # Commit and close   
     conn.commit()
-
-    # Close the cursor and connection
     cursor.close()
     conn.close()
 
@@ -79,16 +77,14 @@ def map_tran_table():
 
     cursor.execute(create_table3)
 
-    # Inserting Values to aggregate_transaction table
+    # Inserting Values to map_transaction table
     for i,row in get_data_for_map_transaction().iterrows(): 
         query = "INSERT INTO map_transaction (state,year,quarter,district,transaction_count,transaction_amount)VALUES (%s, %s, %s, %s, %s, %s)"
         values=(row['state'],row['year'],row['quarter'],row['district'],row['transaction_count'],row['transaction_amount'])
         cursor.execute(query,values)
         
-    # Commit the changes    
+    # Commit and close      
     conn.commit()
-
-    # Close the cursor and connection
     cursor.close()
     conn.close()
 
@@ -104,16 +100,14 @@ def map_user_table():
 
     cursor.execute(create_table4)
 
-    # Inserting Values to aggregate_transaction table
+    # Inserting Values to map_user table
     for i,row in get_data_for_map_user().iterrows(): 
         query = "INSERT INTO map_user (state,year,quarter,district,registered_users,no_of_app_opens)VALUES (%s, %s, %s, %s, %s, %s)"
         values=(row['state'],row['year'],row['quarter'],row['district'],row['registered_users'],row['no_of_app_opens'])
         cursor.execute(query,values)
         
-    # Commit the changes    
+    # Commit and close     
     conn.commit()
-
-    # Close the cursor and connection
     cursor.close()
     conn.close()
 
@@ -129,16 +123,14 @@ def top_tran_pincode_table():
 
     cursor.execute(create_table5)
 
-    # Inserting Values to aggregate_transaction table
+    # Inserting Values to top_transaction_pincode table
     for i,row in get_data_for_top_transaction_pincodes().iterrows(): 
         query = "INSERT INTO top_tran_pincode (state,year,quarter,pincode,transaction_count,transaction_amount)VALUES (%s, %s, %s, %s, %s, %s)"
         values=(row['state'],row['year'],row['quarter'],row['pincode'],row['transaction_count'],row['transaction_amount'])
         cursor.execute(query,values)
         
-    # Commit the changes    
+    # Commit and close    
     conn.commit()
-
-    # Close the cursor and connection
     cursor.close()
     conn.close()
 
@@ -153,16 +145,14 @@ def top_user_pincode_table():
 
     cursor.execute(create_table6)
 
-    # Inserting Values to aggregate_transaction table
+    # Inserting Values to top_user_pincode table
     for i,row in get_data_for_top_user_pincodes().iterrows(): 
         query = "INSERT INTO top_user_pincode (state,year,quarter,pincode,registered_user)VALUES (%s, %s, %s, %s, %s)"
         values=(row['state'],row['year'],row['quarter'],row['pincode'],row['registered_user'])
         cursor.execute(query,values)
         
-    # Commit the changes    
+    # Commit and close      
     conn.commit()
-
-    # Close the cursor and connection
     cursor.close()
     conn.close()
 
@@ -178,16 +168,14 @@ def top_tran_district_table():
 
     cursor.execute(create_table7)
 
-    # Inserting Values to aggregate_transaction table
+    # Inserting Values to top_tran_district table
     for i,row in get_data_for_top_transaction_districts().iterrows(): 
         query = "INSERT INTO top_tran_district (state,year,quarter,district,transaction_count,transaction_amount)VALUES (%s, %s, %s, %s, %s, %s)"
         values=(row['state'],row['year'],row['quarter'],row['district'],row['transaction_count'],row['transaction_amount'])
         cursor.execute(query,values)
         
-    # Commit the changes    
+    # Commit and close     
     conn.commit()
-
-    # Close the cursor and connection
     cursor.close()
     conn.close()
 
@@ -202,16 +190,14 @@ def top_user_district_table():
 
     cursor.execute(create_table8)
 
-    # Inserting Values to aggregate_transaction table
+    # Inserting Values to top_user_district table
     for i,row in get_data_for_top_user_districts().iterrows(): 
         query = "INSERT INTO top_user_district (state,year,quarter,district,registered_user)VALUES (%s, %s, %s, %s, %s)"
         values=(row['state'],row['year'],row['quarter'],row['district'],row['registered_user'])
         cursor.execute(query,values)
         
-    # Commit the changes    
+    # Commit and close     
     conn.commit()
-
-    # Close the cursor and connection
     cursor.close()
     conn.close()
 
@@ -224,8 +210,10 @@ def create_tables():
     top_user_pincode_table()
     top_tran_district_table()
     top_user_district_table()
+    
 # create_tables()
-##to drop a table
+
+#to drop a table
 def drop_table():
     cursor,conn = sql_connection()
     cursor = conn.cursor()
@@ -237,10 +225,9 @@ def drop_table():
     drop_query = f"DROP TABLE IF EXISTS {table_name}"
     cursor.execute(drop_query)
 
-    # Commit the changes
+    # Commit and close  
     conn.commit()
-
-    # Close the cursor and connection
     cursor.close()
     conn.close()
+    
 # drop_table()
