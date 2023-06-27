@@ -1,9 +1,18 @@
 [Introduction](#Introduction)
+
+[Technologies Used](#Technologies-Used)
+
+[Process Flow](#Process-Flow)
+
+[Application Flow](#Application-Flow)
+
+[License](#License)
+
 ## Introduction
 * PhonePe Pulse is a fascinating gateway into the world of digital payments in India! With over 30 crore registered users and a staggering 2000 crore transactions, PhonePe is not just a digital payments platform, but a true beholder of the Indian digital payments revolution.With a remarkable 46% UPI market share, PhonePe stands tall as India's largest digital payments platform.
 * unlock the power of PhonePe Pulse with the help of this application, an extraordinary data analytics platform that offers you a front-row seat to witness the dynamic landscape of digital transactions in India. Dive deep into the depths of data and explore the intriguing insights and captivating trends in different visualization formats. Now, you have the incredible opportunity to tap into the wealth of information with the help of PhonePe Pulse and bring it to life through stunning visualizations!!
 
-    ![analysis.png](https://github.com/Jeel-Kenia/PhonePe-Data_Visualisation/blob/main/images/analysis.png)
+    ![analysis.png](https://github.com/Jeel-Kenia/PhonePe-Data_Visualisation/blob/main/images/Homepage.png)
 ###### " Disclaimer:-Data for year 2018 to 2022 only "
 
 ## Technologies Used
@@ -55,7 +64,7 @@
 
      ![image7](https://github.com/Jeel-Kenia/PhonePe-Data_Visualisation/blob/main/images/image7.png)
 
-## LICENSE
+## License
 > Community Data License Agreement – Permissive – Version 2.0
 
 > Apache License 2.0. 
