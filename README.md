@@ -33,6 +33,12 @@
 > Create a `dashboard` using `Streamlit` to display the data according to our requirements and analysis to gain meaningful insights.
 
 ## Application Flow
-> Once you load the application, you are directed towards the `Home` page which gives a basic overview of the application.
-> You have two options to select from as shown below:
-> ![image](https://github.com/Jeel-Kenia/PhonePe-Data_Visualisation/blob/main/Screenshot%202023-06-27%20at%204.28.31%20PM.png)
+* Once you load the application, you are directed towards the `Home` page which gives a basic overview of the application.
+
+* You have two options to select from as shown below:
+
+     ![image](https://github.com/Jeel-Kenia/PhonePe-Data_Visualisation/blob/main/Screenshot%202023-06-27%20at%204.32.38%20PM.png)
+
+* Depending upon the type of analysis, select one of the two and move on to the respective page.
+
+* Select the **Type** , **Year** , **Quarter** and **State** depending upon the requirement to view charts and tables for the particular period.
