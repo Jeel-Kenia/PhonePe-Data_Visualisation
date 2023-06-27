@@ -34,4 +34,5 @@
 
 ## Application Flow
 > Once you load the application, you are directed towards the `Home` page which gives a basic overview of the application.
-> You have two options
+> You have two options to select from as shown below:
+> ![image](https://github.com/Jeel-Kenia/PhonePe-Data_Visualisation/blob/main/Screenshot%202023-06-27%20at%204.28.31%20PM.png)
