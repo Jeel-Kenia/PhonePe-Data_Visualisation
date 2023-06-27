@@ -6,9 +6,6 @@ import plotly.express as px
 import mysql.connector
 from mysql.connector import Error
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-from data_to_sql import *
-
 
 #####Creating dataframes from cloned data######
 
