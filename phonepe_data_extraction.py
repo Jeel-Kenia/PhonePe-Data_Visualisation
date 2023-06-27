@@ -3,7 +3,7 @@ import os
 import json
 
 repo_url = 'https://github.com/PhonePe/pulse.git'
-destination_path = '/Users/jk/Desktop'
+destination_path = '/Users/Desktop'
 
 # Change the current working directory to the desired destination path
 os.chdir(destination_path)
@@ -11,7 +11,7 @@ os.chdir(destination_path)
 # Execute the git clone command
 os.system(f'git clone {repo_url}')
 
-#####Creating dataframes from cloned data######
+#******************************************    Creating dataframes from cloned data    *********************************************
 
 #Fetching data from aggregate transaction
 def get_data_for_agg_transaction():
@@ -433,6 +433,8 @@ def get_all_data():
     get_data_for_top_transaction_districts()
     get_data_for_top_user_districts()
 # get_all_data()
+
+#********************************************     Clean The Data    ******************************************
 def describe_data():
     print(get_data_for_agg_transaction().describe())
     print(get_data_for_agg_user().describe())
