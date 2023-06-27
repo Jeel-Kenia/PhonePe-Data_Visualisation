@@ -18,3 +18,20 @@
 **`Plotly`** Plotly is a powerful and versatile data visualisation library that allows you to create interactive and visually appealing plots and charts. 
 
 **`pip install -r requirements.txt:`** To install the rquired dependencies.
+
+## Process Flow
+### ETL Process
+> `Extracting` Data from by cloning the rich repository of PhonePe data from [GitHub](https://github.com/PhonePe/).
+
+> `Transforming` data with the help of Python Algorithms to mold and shape the cloned data into a captivating DataFrame format.
+
+> `Loading` Data into SQL by creating a database and tables so that all the data finds its frightful place.
+
+ ### Data Analysis and Visualisation
+> Once data is loaded into MySQL, we extract the required data in the form of `queries`.
+
+> Create a `dashboard` using `Streamlit` to display the data according to our requirements and analysis to gain meaningful insights.
+
+## Application Flow
+> Once you load the application, you are directed towards the `Home` page which gives a basic overview of the application.
+> You have two options
