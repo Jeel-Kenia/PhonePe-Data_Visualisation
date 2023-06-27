@@ -55,5 +55,8 @@
 
      ![image7](https://github.com/Jeel-Kenia/PhonePe-Data_Visualisation/blob/main/images/image7.png)
 
+## LICENSE
+> Community Data License Agreement – Permissive – Version 2.0
 
+> Apache License 2.0. 
 
