@@ -2,6 +2,15 @@ import pandas as pd
 import os
 import json
 
+repo_url = 'https://github.com/PhonePe/pulse.git'
+destination_path = '/Users/jk/Desktop'
+
+# Change the current working directory to the desired destination path
+os.chdir(destination_path)
+
+# Execute the git clone command
+os.system(f'git clone {repo_url}')
+
 #####Creating dataframes from cloned data######
 
 #Fetching data from aggregate transaction
